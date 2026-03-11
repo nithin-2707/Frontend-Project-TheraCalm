@@ -14,10 +14,12 @@ A modern, fully responsive mental wellness therapy website built as a personal f
 - **Fully Responsive** — Optimized layout for mobile, tablet, and desktop
 - **Scroll Reveal Animations** — Smooth entrance animations using GSAP ScrollTrigger
 - **Animated Navigation** — Custom pill-style nav with GSAP hover transitions
+- **Working Contact Form** — Name, email, phone, message with live validation and pre-filled mailto submission
 - **Accessible UI** — Semantic HTML, proper alt text, keyboard-navigable FAQ accordions
 - **SEO Optimized** — Meta tags, Open Graph, Twitter Cards via Next.js Metadata API
 - **Performance First** — Next.js App Router, image optimization with `next/image`
 - **Google Maps Embed** — Interactive office location on the contact page
+- **Dynamic Copyright** — Auto-updating year in the footer
 
 ## Pages
 
@@ -25,7 +27,7 @@ A modern, fully responsive mental wellness therapy website built as a personal f
 |------|-------------|
 | **Home** | Hero, about preview, specialties, support section, FAQ, office gallery, CTA |
 | **About** | Full bio, therapeutic approach cards, philosophy, credentials, who I work with |
-| **Contact** | Office address, telehealth info, booking CTA, Google Maps embed |
+| **Contact** | Working contact form with validation, office info, Google Maps embed |
 
 ## Tech Stack
 
