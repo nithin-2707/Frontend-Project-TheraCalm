@@ -48,7 +48,7 @@ export default function Header() {
       } ${hasScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}
     >
       <PillNav
-        logoText="Dr. Maya Reynolds"
+        logoText="Theracalm"
         items={navItems}
         activeHref="/"
         ease="power2.easeOut"

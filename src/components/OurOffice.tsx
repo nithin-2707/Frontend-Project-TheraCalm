@@ -34,7 +34,7 @@ export default function OurOffice() {
           >
             <Image
               src="/images/office1.jpeg"
-              alt="Dr. Maya Reynolds therapy office - comfortable seating area with natural light in Santa Monica"
+              alt="Theracalm therapy office - comfortable seating area with natural light in Austin, TX"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -48,7 +48,7 @@ export default function OurOffice() {
           >
             <Image
               src="/images/office2.jpeg"
-              alt="Welcoming therapy space with large windows and warm atmosphere in Santa Monica"
+              alt="Welcoming therapy space with large windows and warm atmosphere in Austin, TX"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -101,9 +101,9 @@ export default function OurOffice() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
               </svg>
             </div>
-            <h3 className="text-subheading font-medium text-lilac-olive-dark mb-2">Santa Monica Location</h3>
+            <h3 className="text-subheading font-medium text-lilac-olive-dark mb-2">Austin, TX Location</h3>
             <p className="text-body text-lilac-olive leading-relaxed font-normal">
-              Conveniently located at 123th Street 45 W, Santa Monica, CA 90401. Telehealth also available.
+              Conveniently located at 200 W Cesar Chavez St, Austin, TX 78701. Telehealth also available.
             </p>
           </ScrollRevealElement>
         </div>
@@ -122,7 +122,7 @@ export default function OurOffice() {
             className="text-body text-lilac-olive mt-4 font-normal"
             enableBlur={true}
           >
-            — Dr. Maya Reynolds
+            — Dr. Aria Chen
           </ScrollRevealText>
         </div>
       </div>

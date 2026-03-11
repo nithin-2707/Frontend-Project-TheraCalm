@@ -7,7 +7,7 @@ import ScrollRevealText, { ScrollRevealElement } from './ScrollReveal';
 const faqs = [
   {
     question: 'Do you offer in person or online therapy?',
-    answer: 'Both. I offer in person sessions from my Santa Monica office as well as secure telehealth sessions for clients located anywhere in California. Many clients appreciate having the flexibility to choose based on their schedule and preferences.'
+    answer: 'Both. I offer in person sessions from my Austin office as well as secure telehealth sessions for clients located anywhere in Texas. Many clients appreciate having the flexibility to choose based on their schedule and preferences.'
   },
   {
     question: 'What issues do you specialize in?',
@@ -42,7 +42,7 @@ export default function FAQSection() {
                 alt="Calm therapy office space with comfortable seating"
                 width={400}
                 height={500}
-                className="object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
           </ScrollRevealElement>
@@ -80,7 +80,7 @@ export default function FAQSection() {
                   </button>
                   <div 
                     className={`overflow-hidden transition-all duration-300 ${
-                      openIndex === index ? 'max-h-48 pb-4' : 'max-h-0'
+                      openIndex === index ? 'max-h-96 pb-4' : 'max-h-0'
                     }`}
                   >
                     <p className="text-body text-lilac-olive leading-relaxed font-normal">

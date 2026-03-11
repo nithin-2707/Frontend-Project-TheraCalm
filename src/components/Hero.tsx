@@ -13,8 +13,8 @@ export default function Hero() {
           <ScrollRevealElement className="relative" enableBlur blurStrength={3}>
             <div className="relative w-full aspect-[3/4] max-w-md mx-auto md:mx-0 rounded-[40%_40%_40%_40%/30%_30%_30%_30%] overflow-hidden">
               <Image
-                src="/images/Dr. Maya Reynolds.png"
-                alt="Dr. Maya Reynolds - Licensed Clinical Psychologist specializing in anxiety and trauma therapy in Santa Monica, CA"
+                src="/images/dr-aria-chen.png"
+                alt="Dr. Aria Chen - Licensed Clinical Psychologist specializing in anxiety and trauma therapy in Austin, TX"
                 fill
                 className="object-cover object-top"
                 priority
@@ -31,7 +31,7 @@ export default function Hero() {
               enableBlur
               blurStrength={4}
             >
-              Break free from anxiety & burnout
+              Rediscover calm in the chaos
             </ScrollRevealText>
             <ScrollRevealText 
               as="p" 
@@ -39,7 +39,7 @@ export default function Hero() {
               enableBlur
               blurStrength={3}
             >
-              Anxiety, Trauma & Burnout Therapy in Santa Monica, CA.
+              Anxiety, Trauma & Burnout Therapy in Austin, TX.
             </ScrollRevealText>
             <ScrollRevealElement enableBlur blurStrength={2}>
               <AnimatedButton href="/contact" variant="primary">

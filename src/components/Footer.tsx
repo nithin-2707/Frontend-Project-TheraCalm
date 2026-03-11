@@ -9,13 +9,13 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Address Column */}
             <div>
-              <h3 className="text-subheading font-medium text-lilac-olive-dark mb-4">Dr. Maya Reynolds, PsyD</h3>
-              <p className="text-body text-lilac-olive mb-1">123th Street 45 W</p>
-              <p className="text-body text-lilac-olive mb-4">Santa Monica, CA 90401</p>
-              <a href="mailto:contact@drmayareynolds.com" className="text-body text-lilac-olive underline hover:text-lilac-olive-dark">
-                contact@drmayareynolds.com
+              <h3 className="text-subheading font-medium text-lilac-olive-dark mb-4">Theracalm</h3>
+              <p className="text-body text-lilac-olive mb-1">200 W Cesar Chavez St</p>
+              <p className="text-body text-lilac-olive mb-4">Austin, TX 78701</p>
+              <a href="mailto:contact@theracalm.com" className="text-body text-lilac-olive underline hover:text-lilac-olive-dark">
+                contact@theracalm.com
               </a>
-              <p className="text-body text-lilac-olive mt-1">(310) 555-0123</p>
+              <p className="text-body text-lilac-olive mt-1">(512) 555-0147</p>
             </div>
 
             {/* Hours Column */}
@@ -63,22 +63,9 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Template Credit */}
-          <p className="text-center text-xs text-lilac-olive mb-4">
-            Website Template Credits:{' '}
-            <a 
-              href="https://gobloomcreative.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="underline hover:text-lilac-olive-dark"
-            >
-              Go Bloom Creative
-            </a>
-          </p>
-
           {/* Copyright */}
           <p className="text-center text-xs text-lilac-olive">
-            All Rights Reserved © 2024 Dr. Maya Reynolds, PsyD.
+            All Rights Reserved © 2025 Theracalm.
           </p>
         </div>
       </div>

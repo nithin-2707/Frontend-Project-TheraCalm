@@ -17,7 +17,7 @@ export default function AboutSection() {
               enableBlur
               blurStrength={4}
             >
-              Hi, I'm Dr. Maya.
+              Hi, I'm Dr. Aria.
             </ScrollRevealText>
             <ScrollRevealText 
               as="p" 
@@ -25,7 +25,7 @@ export default function AboutSection() {
               enableBlur
               blurStrength={3}
             >
-              I'm a licensed clinical psychologist based in Santa Monica, California, offering therapy for adults who feel overwhelmed by anxiety, stress, or the lingering effects of past experiences.
+              I'm a licensed clinical psychologist based in Austin, Texas, offering therapy for adults who feel overwhelmed by anxiety, stress, or the lingering effects of past experiences.
             </ScrollRevealText>
             <ScrollRevealText 
               as="p" 
@@ -47,8 +47,8 @@ export default function AboutSection() {
             {/* Main arch-shaped image */}
             <ScrollRevealElement className="relative w-[280px] md:w-[350px] h-[400px] md:h-[500px] rounded-t-full overflow-hidden bg-lilac-sage/30" enableBlur blurStrength={4}>
               <Image
-                src="/images/Dr. Maya Reynolds.png"
-                alt="Dr. Maya Reynolds - Licensed Clinical Psychologist"
+                src="/images/dr-aria-chen.png"
+                alt="Dr. Aria Chen - Licensed Clinical Psychologist"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 768px) 280px, 350px"

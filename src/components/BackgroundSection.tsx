@@ -10,7 +10,7 @@ const backgrounds = [
   },
   {
     title: 'Licensure',
-    content: 'Licensed Clinical Psychologist in the state of California. I maintain all required continuing education credits and stay current with the latest research in trauma treatment, anxiety management, and burnout prevention.'
+    content: 'Licensed Clinical Psychologist in the state of Texas. I maintain all required continuing education credits and stay current with the latest research in trauma treatment, anxiety management, and burnout prevention.'
   },
   {
     title: 'Certifications',

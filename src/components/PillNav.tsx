@@ -29,7 +29,7 @@ interface PillNavProps {
 
 const PillNav = ({
   logo,
-  logoText = 'Dr. Maya Reynolds',
+  logoText = 'Theracalm',
   logoAlt = 'Logo',
   items,
   activeHref = '/',

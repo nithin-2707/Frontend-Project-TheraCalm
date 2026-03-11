@@ -9,15 +9,15 @@ import ScrollRevealText, { ScrollRevealElement } from '@/components/ScrollReveal
 const credentials = [
   {
     title: 'Education',
-    content: 'Doctor of Psychology (PsyD) from an accredited clinical psychology program. Completed extensive training in trauma informed care, cognitive behavioral therapy, and evidence based therapeutic approaches for anxiety and stress related conditions.'
+    content: 'Doctor of Psychology (PsyD) from an accredited clinical psychology program. Completed extensive training in trauma-informed care, cognitive behavioral therapy, and evidence-based therapeutic approaches for anxiety and stress-related conditions.'
   },
   {
     title: 'Licensure',
-    content: 'Licensed Clinical Psychologist in the state of California. I maintain all required continuing education credits and stay current with the latest research in trauma treatment, anxiety management, and burnout prevention.'
+    content: 'Licensed Clinical Psychologist in the state of Texas. I maintain all required continuing education credits and stay current with the latest research in trauma treatment, anxiety management, and burnout prevention.'
   },
   {
     title: 'Certifications',
-    content: 'Certified in EMDR (Eye Movement Desensitization and Reprocessing) therapy for trauma treatment. Additional specialized training in Cognitive Behavioral Therapy (CBT), mindfulness based interventions, and body oriented therapeutic techniques.'
+    content: 'Certified in EMDR (Eye Movement Desensitization and Reprocessing) therapy for trauma treatment. Additional specialized training in Cognitive Behavioral Therapy (CBT), mindfulness-based interventions, and body-oriented therapeutic techniques.'
   }
 ];
 
@@ -44,7 +44,8 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      
+      <div className="h-20 md:h-24"></div>
+
       {/* About Hero */}
       <section className="w-full bg-white py-16 md:py-24 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
@@ -53,8 +54,8 @@ export default function AboutPage() {
             <ScrollRevealElement className="relative" enableBlur blurStrength={3}>
               <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-[3/4] rounded-t-full overflow-hidden">
                 <Image
-                  src="/images/Dr. Maya Reynolds.png"
-                  alt="Dr. Maya Reynolds - Licensed Clinical Psychologist in Santa Monica, CA specializing in anxiety, trauma, and burnout therapy"
+                  src="/images/dr-aria-chen.png"
+                  alt="Dr. Aria Chen - Licensed Clinical Psychologist in Austin, TX specializing in anxiety, trauma, and burnout therapy"
                   fill
                   className="object-cover object-top"
                   priority
@@ -70,7 +71,7 @@ export default function AboutPage() {
                 enableBlur
                 blurStrength={4}
               >
-                About Dr. Maya
+                About Dr. Aria
               </ScrollRevealText>
               <ScrollRevealText 
                 as="p" 
@@ -78,7 +79,7 @@ export default function AboutPage() {
                 enableBlur
                 blurStrength={3}
               >
-                I'm a licensed clinical psychologist based in Santa Monica, California, offering therapy for adults who feel overwhelmed by anxiety, stress, or the lingering effects of past experiences.
+                I'm a licensed clinical psychologist based in Austin, Texas, offering therapy for adults who feel overwhelmed by anxiety, stress, or the lingering effects of past experiences.
               </ScrollRevealText>
               <ScrollRevealText 
                 as="p" 
@@ -293,7 +294,7 @@ export default function AboutPage() {
             enableBlur
             blurStrength={3}
           >
-            If you're ready to take the first step towards a calmer, more grounded you, I'd love to hear from you. I offer both in person sessions in Santa Monica and telehealth for California residents.
+            If you're ready to take the first step towards a calmer, more grounded you, I'd love to hear from you. I offer both in-person sessions in Austin and telehealth for Texas residents.
           </ScrollRevealText>
           <ScrollRevealElement enableBlur blurStrength={2}>
             <AnimatedButton href="/contact" variant="primary">
