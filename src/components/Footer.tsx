@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-center text-xs text-lilac-olive">
-            All Rights Reserved © 2025 Theracalm.
+            All Rights Reserved © {new Date().getFullYear()} Theracalm.
           </p>
         </div>
       </div>
