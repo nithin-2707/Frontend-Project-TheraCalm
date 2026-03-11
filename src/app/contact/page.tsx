@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
@@ -8,6 +9,29 @@ import AnimatedButton from '@/components/AnimatedButton';
 import ScrollRevealText, { ScrollRevealElement } from '@/components/ScrollReveal';
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({ name: '', email: '', message: '' });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setErrors(prev => ({ ...prev, [e.target.name]: '' }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const newErrors = { name: '', email: '', message: '' };
+    let valid = true;
+    if (!formData.name.trim()) { newErrors.name = 'Name is required.'; valid = false; }
+    if (!formData.email.trim() || !/^[^@]+@[^@]+\.[^@]+$/.test(formData.email)) { newErrors.email = 'A valid email is required.'; valid = false; }
+    if (!formData.message.trim()) { newErrors.message = 'Please write a short message.'; valid = false; }
+    if (!valid) { setErrors(newErrors); return; }
+    const subject = encodeURIComponent(`Consultation Request from ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\n\nMessage:\n${formData.message}`);
+    window.location.href = `mailto:contact@theracalm.com?subject=${subject}&body=${body}`;
+    setSubmitted(true);
+  };
+
   return (
     <main className="min-h-screen">
       <Header />
@@ -61,29 +85,111 @@ export default function ContactPage() {
 
       {/* Book Appointment Section */}
       <section className="w-full bg-white py-16 md:py-24 px-6 md:px-12 lg:px-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <ScrollRevealText 
-            as="h2" 
-            className="text-3xl md:text-display font-medium text-lilac-olive-dark mb-6"
+        <div className="max-w-2xl mx-auto">
+          <ScrollRevealText
+            as="h2"
+            className="text-3xl md:text-display font-medium text-lilac-olive-dark mb-4 text-center"
             enableBlur
             blurStrength={4}
           >
             Book an appointment.
           </ScrollRevealText>
-          <ScrollRevealText 
-            as="p" 
-            className="text-body-lg text-lilac-olive mb-8 leading-relaxed font-normal"
+          <ScrollRevealText
+            as="p"
+            className="text-body-lg text-lilac-olive mb-10 leading-relaxed font-normal text-center"
             enableBlur
             blurStrength={3}
           >
-            I believe therapy works best when clients feel respected, understood, and actively involved in the process. Schedule a consultation to see if we're the right fit.
+            Fill in your details below and I'll get back to you within 24 hours.
           </ScrollRevealText>
-          
-          <ScrollRevealElement enableBlur blurStrength={2}>
-            <AnimatedButton href="mailto:contact@theracalm.com" variant="primary">
-              EMAIL ME TO SCHEDULE →
-            </AnimatedButton>
-          </ScrollRevealElement>
+
+          {submitted ? (
+            <div className="bg-lilac-sage rounded-lg p-10 text-center">
+              <div className="text-4xl mb-4">🌿</div>
+              <h3 className="text-subheading font-medium text-lilac-olive-dark mb-2">Message sent!</h3>
+              <p className="text-body text-lilac-olive">Your email client should have opened with your message. I'll be in touch soon.</p>
+            </div>
+          ) : (
+            <ScrollRevealElement enableBlur blurStrength={3}>
+              <form onSubmit={handleSubmit} noValidate className="space-y-6">
+                {/* Name */}
+                <div>
+                  <label htmlFor="name" className="block text-body font-medium text-lilac-olive-dark mb-1">Full Name <span className="text-red-400">*</span></label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Jane Smith"
+                    className={`w-full px-4 py-3 rounded-lg border text-body text-lilac-olive-dark placeholder:text-lilac-olive/50 bg-white outline-none transition-colors focus:border-[#306e78] ${
+                      errors.name ? 'border-red-400' : 'border-lilac-sage'
+                    }`}
+                  />
+                  {errors.name && <p className="text-xs text-red-400 mt-1">{errors.name}</p>}
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label htmlFor="email" className="block text-body font-medium text-lilac-olive-dark mb-1">Email Address <span className="text-red-400">*</span></label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="jane@example.com"
+                    className={`w-full px-4 py-3 rounded-lg border text-body text-lilac-olive-dark placeholder:text-lilac-olive/50 bg-white outline-none transition-colors focus:border-[#306e78] ${
+                      errors.email ? 'border-red-400' : 'border-lilac-sage'
+                    }`}
+                  />
+                  {errors.email && <p className="text-xs text-red-400 mt-1">{errors.email}</p>}
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label htmlFor="phone" className="block text-body font-medium text-lilac-olive-dark mb-1">Phone <span className="text-lilac-olive/50 font-normal">(optional)</span></label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="(512) 000-0000"
+                    className="w-full px-4 py-3 rounded-lg border border-lilac-sage text-body text-lilac-olive-dark placeholder:text-lilac-olive/50 bg-white outline-none transition-colors focus:border-[#306e78]"
+                  />
+                </div>
+
+                {/* Message */}
+                <div>
+                  <label htmlFor="message" className="block text-body font-medium text-lilac-olive-dark mb-1">What brings you here? <span className="text-red-400">*</span></label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell me a little about what you're experiencing and what you're hoping to work on..."
+                    className={`w-full px-4 py-3 rounded-lg border text-body text-lilac-olive-dark placeholder:text-lilac-olive/50 bg-white outline-none transition-colors focus:border-[#306e78] resize-none ${
+                      errors.message ? 'border-red-400' : 'border-lilac-sage'
+                    }`}
+                  />
+                  {errors.message && <p className="text-xs text-red-400 mt-1">{errors.message}</p>}
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-4 px-8 bg-[#306e78] text-white font-medium rounded-lg hover:bg-[#264f56] transition-colors duration-200 text-body tracking-wide"
+                >
+                  SEND MESSAGE →
+                </button>
+
+                <p className="text-xs text-lilac-olive text-center">
+                  Submitting will open your email client with your message pre-filled.
+                </p>
+              </form>
+            </ScrollRevealElement>
+          )}
         </div>
       </section>
 
