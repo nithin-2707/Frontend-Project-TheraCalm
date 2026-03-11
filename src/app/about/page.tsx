@@ -98,7 +98,7 @@ export default function AboutPage() {
                 I take a warm, collaborative, and grounded approach to therapy. Sessions are structured enough to feel supportive, while still leaving space for reflection and depth.
               </ScrollRevealText>
               <ScrollRevealElement enableBlur blurStrength={2}>
-                <AnimatedButton href="/contact" variant="primary">
+                <AnimatedButton href="/contact#booking-form" variant="primary">
                   SCHEDULE A CONSULTATION →
                 </AnimatedButton>
               </ScrollRevealElement>
@@ -257,7 +257,7 @@ export default function AboutPage() {
                 ))}
               </ul>
               <ScrollRevealElement enableBlur blurStrength={2}>
-                <AnimatedButton href="/contact" variant="primary">
+                <AnimatedButton href="/contact#booking-form" variant="primary">
                   GET IN TOUCH →
                 </AnimatedButton>
               </ScrollRevealElement>
@@ -297,7 +297,7 @@ export default function AboutPage() {
             If you're ready to take the first step towards a calmer, more grounded you, I'd love to hear from you. I offer both in-person sessions in Austin and telehealth for Texas residents.
           </ScrollRevealText>
           <ScrollRevealElement enableBlur blurStrength={2}>
-            <AnimatedButton href="/contact" variant="primary">
+            <AnimatedButton href="/contact#booking-form" variant="primary">
               SCHEDULE A CONSULTATION →
             </AnimatedButton>
           </ScrollRevealElement>

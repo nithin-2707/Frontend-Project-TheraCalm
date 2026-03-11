@@ -40,7 +40,7 @@ export default function AboutPreview() {
               
               {/* Button - directly under text */}
               <ScrollRevealElement enableBlur blurStrength={2}>
-                <AnimatedButton href="/contact" variant="primary">
+                <AnimatedButton href="/contact#booking-form" variant="primary">
                   GET IN TOUCH →
                 </AnimatedButton>
               </ScrollRevealElement>

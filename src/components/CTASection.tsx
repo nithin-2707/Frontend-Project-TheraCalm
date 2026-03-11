@@ -32,7 +32,7 @@ export default function CTASection() {
           If you're ready to take the first step towards a calmer, more grounded you, I'd love to hear from you.
         </ScrollRevealText>
         <ScrollRevealElement enableBlur blurStrength={2}>
-          <AnimatedButton href="/contact" variant="white">
+          <AnimatedButton href="/contact#booking-form" variant="white">
             BOOK A CONSULTATION →
           </AnimatedButton>
         </ScrollRevealElement>

@@ -36,7 +36,7 @@ export default function AboutSection() {
               I take a warm, collaborative, and grounded approach to therapy. Sessions are structured enough to feel supportive, while still leaving space for reflection and depth.
             </ScrollRevealText>
             <ScrollRevealElement enableBlur blurStrength={2}>
-              <AnimatedButton href="/contact" variant="outline">
+              <AnimatedButton href="/contact#booking-form" variant="outline">
                 LET'S CHAT →
               </AnimatedButton>
             </ScrollRevealElement>

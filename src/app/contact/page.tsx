@@ -84,7 +84,7 @@ export default function ContactPage() {
       </section>
 
       {/* Book Appointment Section */}
-      <section className="w-full bg-white py-16 md:py-24 px-6 md:px-12 lg:px-20">
+      <section id="booking-form" className="w-full bg-white py-16 md:py-24 px-6 md:px-12 lg:px-20">
         <div className="max-w-2xl mx-auto">
           <ScrollRevealText
             as="h2"
